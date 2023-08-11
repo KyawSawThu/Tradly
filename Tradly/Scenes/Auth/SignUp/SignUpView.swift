@@ -81,22 +81,20 @@ struct SignUpView: View {
     
     // MARK: - BODY
     var body: some View {
-        NavigationView {
-            ZStack {
-                backgroundView
-                VStack(spacing: 0) {
-                    navigationView
-                    Spacer()
-                    titleView
-                        .padding(.bottom, 26)
-                    formView
-                        .padding(.bottom, 44)
-                    footerView
-                    Spacer()
-                } //: VSTACK
-                .padding(.horizontal, 32)
-            } //: ZSTACK
-        } //: NAVIGATION
+        ZStack {
+            backgroundView
+            VStack(spacing: 0) {
+                navigationView
+                Spacer()
+                titleView
+                    .padding(.bottom, 26)
+                formView
+                    .padding(.bottom, 44)
+                footerView
+                Spacer()
+            } //: VSTACK
+            .padding(.horizontal, 32)
+        } //: ZSTACK
         .navigationBarHidden(true)
     }
 }

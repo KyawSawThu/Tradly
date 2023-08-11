@@ -57,31 +57,28 @@ struct RequestOTPView: View {
             Text("Or login with Social")
                 .font(.mB18)
                 .foregroundColor(.white)
-            Button {
-                print("next")
+            NavigationLink {
+                VerifyOTPView()
             } label: {
                 PrimaryButtonView(title: "Next")
             }
-
         }
     }
     
     // MARK: - BODY
     var body: some View {
-        NavigationView {
-            ZStack {
-                backgroundView
-                VStack {
-                    navigationView
-                        .padding(.bottom, 66)
-                    titleView
-                        .padding(.bottom, 16)
-                    formView
-                    Spacer()
-                } //: VSTACK
-                .padding(.horizontal, 32)
-            } //: ZSTACK
-        } //: NAVIGATION
+        ZStack {
+            backgroundView
+            VStack {
+                navigationView
+                    .padding(.bottom, 66)
+                titleView
+                    .padding(.bottom, 16)
+                formView
+                Spacer()
+            } //: VSTACK
+            .padding(.horizontal, 32)
+        } //: ZSTACK
         .navigationBarHidden(true)
     }
 }

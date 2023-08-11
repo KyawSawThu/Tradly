@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		BB4EB8D42A8552C500550B96 /* RequestOTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4EB8D32A8552C500550B96 /* RequestOTPView.swift */; };
+		BB55C6612A85DE5500A13DFC /* VerifyOTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55C6602A85DE5500A13DFC /* VerifyOTPView.swift */; };
+		BB55C6632A85E58200A13DFC /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55C6622A85E58200A13DFC /* OTPView.swift */; };
+		BB55C6682A86097100A13DFC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55C6672A86097100A13DFC /* HomeView.swift */; };
+		BB55C66B2A86099200A13DFC /* BrowseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55C66A2A86099200A13DFC /* BrowseView.swift */; };
+		BB55C66E2A86099E00A13DFC /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55C66D2A86099E00A13DFC /* StoreView.swift */; };
+		BB55C6712A8609B300A13DFC /* OrderHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55C6702A8609B300A13DFC /* OrderHistoryView.swift */; };
+		BB55C6742A8609BE00A13DFC /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55C6732A8609BE00A13DFC /* ProfileView.swift */; };
+		BB55C67A2A860A2D00A13DFC /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55C6792A860A2D00A13DFC /* RootView.swift */; };
+		BB55C67C2A862F7D00A13DFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55C67B2A862F7D00A13DFC /* AppDelegate.swift */; };
 		BBC1058F2A833EB0001DD9BF /* TradlyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC1058E2A833EB0001DD9BF /* TradlyApp.swift */; };
 		BBC105932A833EB1001DD9BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBC105922A833EB1001DD9BF /* Assets.xcassets */; };
 		BBC105962A833EB1001DD9BF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBC105952A833EB1001DD9BF /* Preview Assets.xcassets */; };
@@ -30,6 +39,15 @@
 
 /* Begin PBXFileReference section */
 		BB4EB8D32A8552C500550B96 /* RequestOTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestOTPView.swift; sourceTree = "<group>"; };
+		BB55C6602A85DE5500A13DFC /* VerifyOTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyOTPView.swift; sourceTree = "<group>"; };
+		BB55C6622A85E58200A13DFC /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
+		BB55C6672A86097100A13DFC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		BB55C66A2A86099200A13DFC /* BrowseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseView.swift; sourceTree = "<group>"; };
+		BB55C66D2A86099E00A13DFC /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
+		BB55C6702A8609B300A13DFC /* OrderHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryView.swift; sourceTree = "<group>"; };
+		BB55C6732A8609BE00A13DFC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		BB55C6792A860A2D00A13DFC /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		BB55C67B2A862F7D00A13DFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBC1058B2A833EB0001DD9BF /* Tradly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tradly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBC1058E2A833EB0001DD9BF /* TradlyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradlyApp.swift; sourceTree = "<group>"; };
 		BBC105922A833EB1001DD9BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,6 +87,94 @@
 				BB4EB8D32A8552C500550B96 /* RequestOTPView.swift */,
 			);
 			path = RequestOTP;
+			sourceTree = "<group>";
+		};
+		BB55C65F2A85DE4500A13DFC /* VerifyOTP */ = {
+			isa = PBXGroup;
+			children = (
+				BB55C6602A85DE5500A13DFC /* VerifyOTPView.swift */,
+			);
+			path = VerifyOTP;
+			sourceTree = "<group>";
+		};
+		BB55C6642A86091B00A13DFC /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				BBC105BE2A834A6E001DD9BF /* LaunchView.swift */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		BB55C6652A86092800A13DFC /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				BBE48E112A8494CB0059BF14 /* Login */,
+				BBE4CF912A85378F0005B2CA /* SignUp */,
+				BB4EB8D22A8552B100550B96 /* RequestOTP */,
+				BB55C65F2A85DE4500A13DFC /* VerifyOTP */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		BB55C6662A86095800A13DFC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BB55C6672A86097100A13DFC /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BB55C6692A86098900A13DFC /* Browse */ = {
+			isa = PBXGroup;
+			children = (
+				BB55C66A2A86099200A13DFC /* BrowseView.swift */,
+			);
+			path = Browse;
+			sourceTree = "<group>";
+		};
+		BB55C66C2A86099600A13DFC /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				BB55C66D2A86099E00A13DFC /* StoreView.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		BB55C66F2A8609A000A13DFC /* OrderHistory */ = {
+			isa = PBXGroup;
+			children = (
+				BB55C6702A8609B300A13DFC /* OrderHistoryView.swift */,
+			);
+			path = OrderHistory;
+			sourceTree = "<group>";
+		};
+		BB55C6722A8609B600A13DFC /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				BB55C6732A8609BE00A13DFC /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		BB55C6752A8609C500A13DFC /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				BB55C6762A8609E200A13DFC /* Tab */,
+				BB55C6662A86095800A13DFC /* Home */,
+				BB55C6692A86098900A13DFC /* Browse */,
+				BB55C66C2A86099600A13DFC /* Store */,
+				BB55C66F2A8609A000A13DFC /* OrderHistory */,
+				BB55C6722A8609B600A13DFC /* Profile */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		BB55C6762A8609E200A13DFC /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				BB55C6792A860A2D00A13DFC /* RootView.swift */,
+			);
+			path = Tab;
 			sourceTree = "<group>";
 		};
 		BBC105822A833EB0001DD9BF = {
@@ -115,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				BBC1058E2A833EB0001DD9BF /* TradlyApp.swift */,
+				BB55C67B2A862F7D00A13DFC /* AppDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -123,10 +230,8 @@
 			isa = PBXGroup;
 			children = (
 				BBC105BD2A834A4E001DD9BF /* Launch */,
-				BBC105C02A834A9A001DD9BF /* Onboarding */,
-				BBE48E112A8494CB0059BF14 /* Login */,
-				BBE4CF912A85378F0005B2CA /* SignUp */,
-				BB4EB8D22A8552B100550B96 /* RequestOTP */,
+				BB55C6652A86092800A13DFC /* Auth */,
+				BB55C6752A8609C500A13DFC /* Tab */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -136,6 +241,7 @@
 			children = (
 				BBE48E192A84E0150059BF14 /* PrimaryTextField.swift */,
 				BBE48E1B2A84E2E20059BF14 /* PrimaryButton.swift */,
+				BB55C6622A85E58200A13DFC /* OTPView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,7 +279,8 @@
 		BBC105BD2A834A4E001DD9BF /* Launch */ = {
 			isa = PBXGroup;
 			children = (
-				BBC105BE2A834A6E001DD9BF /* LaunchView.swift */,
+				BB55C6642A86091B00A13DFC /* Launch */,
+				BBC105C02A834A9A001DD9BF /* Onboarding */,
 			);
 			path = Launch;
 			sourceTree = "<group>";
@@ -292,18 +399,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB55C67C2A862F7D00A13DFC /* AppDelegate.swift in Sources */,
 				BBE48E1A2A84E0150059BF14 /* PrimaryTextField.swift in Sources */,
 				BBE48E1C2A84E2E20059BF14 /* PrimaryButton.swift in Sources */,
 				BBC105BF2A834A6E001DD9BF /* LaunchView.swift in Sources */,
 				BBC105A92A8344B7001DD9BF /* Images.swift in Sources */,
 				BBC105A72A834049001DD9BF /* Colors.swift in Sources */,
+				BB55C66B2A86099200A13DFC /* BrowseView.swift in Sources */,
 				BBC105C22A834AB8001DD9BF /* OnboardingView.swift in Sources */,
 				BBC105C42A834AD2001DD9BF /* Fonts.swift in Sources */,
 				BBC1058F2A833EB0001DD9BF /* TradlyApp.swift in Sources */,
 				BBE4CF932A8537A10005B2CA /* SignUpView.swift in Sources */,
 				BB4EB8D42A8552C500550B96 /* RequestOTPView.swift in Sources */,
+				BB55C67A2A860A2D00A13DFC /* RootView.swift in Sources */,
 				BBE48E162A84A6C40059BF14 /* TextField.swift in Sources */,
+				BB55C6742A8609BE00A13DFC /* ProfileView.swift in Sources */,
+				BB55C6712A8609B300A13DFC /* OrderHistoryView.swift in Sources */,
+				BB55C6632A85E58200A13DFC /* OTPView.swift in Sources */,
+				BB55C6612A85DE5500A13DFC /* VerifyOTPView.swift in Sources */,
+				BB55C6682A86097100A13DFC /* HomeView.swift in Sources */,
 				BBE48E132A8494D60059BF14 /* LoginView.swift in Sources */,
+				BB55C66E2A86099E00A13DFC /* StoreView.swift in Sources */,
 				BBC105C72A83650D001DD9BF /* OnboardingData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
