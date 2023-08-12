@@ -14,7 +14,7 @@ struct TextFieldPlaceholder: ViewModifier {
     func body(content: Content) -> some View {
         ZStack(alignment: .leading) {
             Text(placeholder)
-                .font(.mR18)
+                .font(.jbR18)
                 .foregroundColor(.white)
                 .opacity(text.isEmpty ? 1 : 0)
             content
@@ -25,7 +25,7 @@ struct TextFieldPlaceholder: ViewModifier {
 extension TextField {
     func primaryStyle<Content: View> () -> some View {
         self
-        .font(.mR18)
+        .font(.jbR18)
         .foregroundColor(.white)
         .frame(height: 48)
         .background(Color.clear)

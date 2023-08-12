@@ -34,10 +34,10 @@ struct RequestOTPView: View {
     private var titleView: some View {
         VStack(spacing: 30) {
             Text("Verify your mobile number")
-                .font(.mM24)
+                .font(.jbM24)
                 .foregroundColor(.white)
             Text("We have sent you an SMS with a code to enter number")
-                .font(.mR16)
+                .font(.jbR16)
                 .foregroundColor(.white)
                 .multilineTextAlignment(.center)
         }
@@ -46,7 +46,7 @@ struct RequestOTPView: View {
     private var formView: some View {
         VStack(spacing: 16) {
             Text("0631301044")
-                .font(.mB18)
+                .font(.jbB18)
                 .foregroundColor(.white)
                 .frame(maxWidth: .infinity, maxHeight: 48, alignment: .leading)
                 .offset(x: 16)
@@ -55,7 +55,7 @@ struct RequestOTPView: View {
                 )
                 .padding(.bottom, 32)
             Text("Or login with Social")
-                .font(.mB18)
+                .font(.jbB18)
                 .foregroundColor(.white)
             NavigationLink {
                 VerifyOTPView()

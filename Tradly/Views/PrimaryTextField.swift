@@ -14,13 +14,13 @@ struct PrimaryTextField: View {
     var body: some View {
         ZStack(alignment: .leading) {
             Text(placeholder)
-                .font(.mR18)
+                .font(.jbR18)
                 .foregroundColor(.white)
                 .background(Color.clear)
                 .opacity(text.wrappedValue.isEmpty ? 1 : 0)
                 .padding(.horizontal, 16)
             TextField(text.wrappedValue, text: text)
-                .font(.mR18)
+                .font(.jbR18)
                 .foregroundColor(.white)
                 .accentColor(.white)
                 .padding(.horizontal, 16)

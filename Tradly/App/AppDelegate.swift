@@ -18,7 +18,20 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     }
     
     private func configureAppearance() {
-        UITabBarItem.appearance().setTitleTextAttributes([.font: UIFont(name: "Montserrat-Bold", size: 10)!], for: .normal)
-        UITabBarItem.appearance().setTitleTextAttributes([.font: UIFont(name: "Montserrat-Bold", size: 10)!], for: .selected)
+        UITabBar.appearance().isTranslucent = false
+        UITabBar.appearance().backgroundColor = .white
+//        UITabBar.appearance().tintColor = UIColor(named: "ColorGreen")
+//        UITabBar.appearance().barTintColor = UIColor(named: "ColorGreen")
+//        UITabBar.appearance().unselectedItemTintColor = UIColor(named: "ColorGrey")
+        
+        let normalAttributes: [NSAttributedString.Key: Any] = [
+            .font: UIFont(name: "JetBrainsMono-Bold", size: 10)!
+        ]
+        let selectedAttributes: [NSAttributedString.Key: Any] = [
+            .font: UIFont(name: "JetBrainsMono-Bold", size: 10)!
+        ]
+
+        UITabBarItem.appearance().setTitleTextAttributes(normalAttributes, for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes(selectedAttributes, for: .selected)
     }
 }

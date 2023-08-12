@@ -21,11 +21,11 @@ struct LoginView: View {
     private var titleView: some View {
         VStack(spacing: 36) {
             Text("Welcome to Tradly")
-                .font(.mM24)
+                .font(.jbM24)
                 .foregroundColor(.white)
             
             Text("Login to your account")
-                .font(.mR16)
+                .font(.jbR16)
                 .foregroundColor(.white)
         }
     }
@@ -49,7 +49,7 @@ struct LoginView: View {
                 print("forgot")
             } label: {
                 Text("Forgot your password?")
-                    .font(.mR18)
+                    .font(.jbR18)
                     .foregroundColor(.white)
             }
             
@@ -57,11 +57,11 @@ struct LoginView: View {
                 SignUpView()
             } label: {
                 Text("Don’t have an account? ")
-                    .font(.mR18)
+                    .font(.jbR18)
                     .foregroundColor(.white)
                 +
                 Text("Sign up")
-                    .font(.mB18)
+                    .font(.jbB18)
                     .foregroundColor(.white)
             }
         }

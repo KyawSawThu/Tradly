@@ -39,10 +39,10 @@ struct SignUpView: View {
     private var titleView: some View {
         VStack(spacing: 36) {
             Text("Welcome to Tradly")
-                .font(.mM24)
+                .font(.jbM24)
                 .foregroundColor(.white)
             Text("Signup your account")
-                .font(.mR16)
+                .font(.jbR16)
                 .foregroundColor(.white)
         }
     }
@@ -69,11 +69,11 @@ struct SignUpView: View {
                 presentationMode.wrappedValue.dismiss()
             } label: {
                 Text("Have an account? ")
-                    .font(.mR18)
+                    .font(.jbR18)
                     .foregroundColor(.white)
                 +
                 Text("Sign in")
-                    .font(.mB18)
+                    .font(.jbB18)
                     .foregroundColor(.white)
             }
         }

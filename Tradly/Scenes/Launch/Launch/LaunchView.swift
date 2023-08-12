@@ -21,7 +21,7 @@ struct LaunchView: View {
                     Image("tradly.logo")
                         .frame(width: 126, height: 126, alignment: .center)
                     Text("Tradly")
-                        .font(.mM30)
+                        .font(.jbM30)
                         .foregroundColor(Color.white)
                 } //: VSTACK
             } //: ZSTACK

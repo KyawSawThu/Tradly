@@ -11,7 +11,7 @@ struct PrimaryButtonView: View {
     var title: String
     var body: some View {
         Text(title)
-            .font(.mR16)
+            .font(.jbR16)
             .foregroundColor(Color.colorGreen)
             .frame(maxWidth: .infinity, maxHeight: 48)
             .background(Color.white)

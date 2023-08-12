@@ -36,7 +36,7 @@ struct OnboardingView: View {
             VStack(spacing: 50) {
                 Spacer()
                 Text(onboardingData[currentPage].title)
-                    .font(.mM20)
+                    .font(.jbM20)
                     .foregroundColor(Color.colorGreen)
                     .multilineTextAlignment(.center)
                 HStack {
@@ -52,7 +52,7 @@ struct OnboardingView: View {
                     }
                 } label: {
                     Text("Next")
-                        .font(.mSB18)
+                        .font(.jbSB18)
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
                         .padding()

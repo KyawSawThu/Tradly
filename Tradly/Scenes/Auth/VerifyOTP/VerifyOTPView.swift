@@ -34,10 +34,10 @@ struct VerifyOTPView: View {
     private var titleView: some View {
         VStack(spacing: 24) {
             Text("Phone Verification")
-                .font(.mM24)
+                .font(.jbM24)
                 .foregroundColor(.white)
             Text("Enter your OTP code here")
-                .font(.mR16)
+                .font(.jbR16)
                 .foregroundColor(.white)
                 .multilineTextAlignment(.center)
         }
@@ -48,18 +48,19 @@ struct VerifyOTPView: View {
             OTPView()
                 .padding(.bottom, 32)
             Text("Didn’t you received any code?")
-                .font(.mB18)
+                .font(.jbB18)
                 .foregroundColor(.white)
             Button {
                 print("resend")
             } label: {
                 Text("Resent new code")
-                    .font(.mR18)
+                    .font(.jbR18)
                     .foregroundColor(Color.white)
             }
             .padding(.bottom, 48)
 
             Button {
+                AppState.shared.isAuthed = true
                 print("verify")
             } label: {
                 PrimaryButtonView(title: "Verify")

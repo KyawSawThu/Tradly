@@ -16,30 +16,30 @@ struct RootView: View {
     var body: some View {
         TabView(selection: $selectedTab) {
             HomeView()
+                .tabItem {
+                    TabItemView(data: tabs[0].item, isActive: $selectedTab.onSelected(0))
+                }
                 .tag(0)
-                .tabItem {
-                    TabItemView(data: tabs[0].item, isActive: selectedTab == 0)
-                }
             BrowseView()
+                .tabItem {
+                    TabItemView(data: tabs[1].item, isActive: $selectedTab.onSelected(1))
+                }
                 .tag(1)
-                .tabItem {
-                    TabItemView(data: tabs[1].item, isActive: selectedTab == 1)
-                }
             StoreView()
+                .tabItem {
+                    TabItemView(data: tabs[2].item, isActive: $selectedTab.onSelected(2))
+                }
                 .tag(2)
+            OrderView()
                 .tabItem {
-                    TabItemView(data: tabs[2].item, isActive: selectedTab == 2)
+                    TabItemView(data: tabs[3].item, isActive: $selectedTab.onSelected(3))
                 }
-            OrderHistoryView()
                 .tag(3)
-                .tabItem {
-                    TabItemView(data: tabs[3].item, isActive: selectedTab == 3)
-                }
             ProfileView()
-                .tag(4)
                 .tabItem {
-                    TabItemView(data: tabs[4].item, isActive: selectedTab == 4)
+                    TabItemView(data: tabs[4].item, isActive: $selectedTab.onSelected(4))
                 }
+                .tag(4)
         }
         .accentColor(.colorGreen)
     }
@@ -53,7 +53,7 @@ struct RootView_Previews: PreviewProvider {
 
 struct TabItemView: View {
     var data: TabItemData
-    var isActive: Bool
+    @Binding var isActive: Bool
     
     var body: some View {
         VStack(spacing: 0) {
@@ -61,10 +61,22 @@ struct TabItemView: View {
                 .resizable()
                 .renderingMode(.template)
                 .frame(width: 12, height: 12)
-                .foregroundColor(isActive ? .colorGreen : .colorGrey)
+                .foregroundColor(isActive ? .red : .colorGrey)
             Text(data.title)
-                .foregroundColor(isActive ? .colorGreen : .colorGrey)
+                .foregroundColor(isActive ? .red : .colorGrey)
         } //: VSTACK
+    }
+}
+
+extension Binding where Value == Int {
+    func onSelected(_ index: Int) -> Binding<Bool> {
+        return Binding<Bool>(
+            get: {
+                self.wrappedValue == index
+            }, set: { _ in
+                self.wrappedValue = index
+            }
+        )
     }
 }
 
@@ -72,7 +84,7 @@ enum Tab: CaseIterable {
     case home
     case browse
     case store
-    case orderHistory
+    case order
     case profile
     
     var item: TabItemData {
@@ -80,7 +92,7 @@ enum Tab: CaseIterable {
         case .home: return .init(icon: "tab.home", title: "Home")
         case .browse: return .init(icon: "tab.search", title: "Browse")
         case .store: return .init(icon: "tab.store", title: "Store")
-        case .orderHistory: return .init(icon: "tab.order", title: "Order History")
+        case .order: return .init(icon: "tab.order", title: "Order")
         case .profile: return .init(icon: "tab.profile", title: "Profile")
         }
     }

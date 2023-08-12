@@ -11,6 +11,7 @@ import SwiftUI
 @main
 struct TradlyApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    @State var appState = AppState()
     
     var body: some Scene {
         WindowGroup {

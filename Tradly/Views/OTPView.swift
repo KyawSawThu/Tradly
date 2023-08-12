@@ -30,7 +30,7 @@ struct OTPView: View {
     private var inputView: some View {
         VStack(spacing: 16) {
             Text("1")
-                .font(.mM30)
+                .font(.jbM30)
                 .foregroundColor(.white)
             Rectangle()
                 .frame(maxWidth: 36, maxHeight: 1)
