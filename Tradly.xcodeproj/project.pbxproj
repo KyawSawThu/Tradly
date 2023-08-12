@@ -19,6 +19,9 @@
 		BB17EB8E2A87A2CF0091023F /* HomeProductItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17EB8D2A87A2CF0091023F /* HomeProductItemView.swift */; };
 		BB17EB902A87A3840091023F /* HomeSecationHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17EB8F2A87A3840091023F /* HomeSecationHeaderView.swift */; };
 		BB17EB922A87A6690091023F /* HomeStoreItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17EB912A87A6690091023F /* HomeStoreItemView.swift */; };
+		BB17EB942A87AE9E0091023F /* OffsetScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17EB932A87AE9E0091023F /* OffsetScrollView.swift */; };
+		BB17EB962A87E4EC0091023F /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17EB952A87E4EC0091023F /* ToastView.swift */; };
+		BB17EB982A87E7B70091023F /* NavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17EB972A87E7B70091023F /* NavView.swift */; };
 		BB4EB8D42A8552C500550B96 /* RequestOTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4EB8D32A8552C500550B96 /* RequestOTPView.swift */; };
 		BB55C6612A85DE5500A13DFC /* VerifyOTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55C6602A85DE5500A13DFC /* VerifyOTPView.swift */; };
 		BB55C6632A85E58200A13DFC /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55C6622A85E58200A13DFC /* OTPView.swift */; };
@@ -58,6 +61,9 @@
 		BB17EB8D2A87A2CF0091023F /* HomeProductItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProductItemView.swift; sourceTree = "<group>"; };
 		BB17EB8F2A87A3840091023F /* HomeSecationHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSecationHeaderView.swift; sourceTree = "<group>"; };
 		BB17EB912A87A6690091023F /* HomeStoreItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStoreItemView.swift; sourceTree = "<group>"; };
+		BB17EB932A87AE9E0091023F /* OffsetScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetScrollView.swift; sourceTree = "<group>"; };
+		BB17EB952A87E4EC0091023F /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		BB17EB972A87E7B70091023F /* NavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavView.swift; sourceTree = "<group>"; };
 		BB4EB8D32A8552C500550B96 /* RequestOTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestOTPView.swift; sourceTree = "<group>"; };
 		BB55C6602A85DE5500A13DFC /* VerifyOTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyOTPView.swift; sourceTree = "<group>"; };
 		BB55C6622A85E58200A13DFC /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
@@ -265,6 +271,9 @@
 				BBE48E1B2A84E2E20059BF14 /* PrimaryButton.swift */,
 				BB55C6622A85E58200A13DFC /* OTPView.swift */,
 				BB17EB852A878E530091023F /* SearchTextField.swift */,
+				BB17EB932A87AE9E0091023F /* OffsetScrollView.swift */,
+				BB17EB952A87E4EC0091023F /* ToastView.swift */,
+				BB17EB972A87E7B70091023F /* NavView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -439,7 +448,9 @@
 				BB4EB8D42A8552C500550B96 /* RequestOTPView.swift in Sources */,
 				BB55C67A2A860A2D00A13DFC /* RootView.swift in Sources */,
 				BBE48E162A84A6C40059BF14 /* TextField.swift in Sources */,
+				BB17EB962A87E4EC0091023F /* ToastView.swift in Sources */,
 				BB17EB8A2A87A2320091023F /* HomeBannerItemView.swift in Sources */,
+				BB17EB982A87E7B70091023F /* NavView.swift in Sources */,
 				BB55C6742A8609BE00A13DFC /* ProfileView.swift in Sources */,
 				BB17EB8E2A87A2CF0091023F /* HomeProductItemView.swift in Sources */,
 				BB55C6712A8609B300A13DFC /* OrderView.swift in Sources */,
@@ -450,6 +461,7 @@
 				BB55C6682A86097100A13DFC /* HomeView.swift in Sources */,
 				BBE48E132A8494D60059BF14 /* LoginView.swift in Sources */,
 				BB55C66E2A86099E00A13DFC /* StoreView.swift in Sources */,
+				BB17EB942A87AE9E0091023F /* OffsetScrollView.swift in Sources */,
 				BB17EB8C2A87A2650091023F /* HomeCategoryItemView.swift in Sources */,
 				BBC105C72A83650D001DD9BF /* OnboardingData.swift in Sources */,
 				BB17EB862A878E530091023F /* SearchTextField.swift in Sources */,

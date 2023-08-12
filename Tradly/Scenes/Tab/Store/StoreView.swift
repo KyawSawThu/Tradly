@@ -8,8 +8,28 @@
 import SwiftUI
 
 struct StoreView: View {
+    // MARK: - PROPERTIES
+    // MARK: - COMPONENTS
+    private var backgroundView: some View {
+        Color.colorGreen
+            .ignoresSafeArea()
+    }
+    // MARK: - BODY
     var body: some View {
-        Text("Store")
+        NavigationView {
+            ZStack {
+                backgroundView
+                VStack(spacing: 0) {
+                    NavView(title: "Store")
+                        .padding(.horizontal, 20)
+                        .padding(.bottom, 16)
+                    ScrollView(showsIndicators: false) {
+                        
+                    } //: SCROLL
+                    .background(Color.white)
+                }
+            } //: ZSTACK
+        } //: NAVIGATION
     }
 }
 

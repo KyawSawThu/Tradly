@@ -18,7 +18,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     }
     
     private func configureAppearance() {
-        UITabBar.appearance().isTranslucent = false
+        UITabBar.appearance().isTranslucent = true
         UITabBar.appearance().backgroundColor = .white
 //        UITabBar.appearance().tintColor = UIColor(named: "ColorGreen")
 //        UITabBar.appearance().barTintColor = UIColor(named: "ColorGreen")

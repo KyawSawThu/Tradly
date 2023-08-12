@@ -39,13 +39,14 @@ struct HomeStoreItemView: View {
                     .frame(width: 64, height: 64)
                     .offset(y: -(frame.size.height * 0.1))
             } //: ZSTACK
-        }
+        } //: GEOMETRY
         .frame(width: 160)
         .cornerRadius(12)
         .overlay(
             RoundedRectangle(cornerRadius: 12)
                 .stroke(Color.gray, lineWidth: 1.5)
         )
+        
     }
 }
 

@@ -11,36 +11,17 @@ struct HomeView: View {
     // MARK: - PROPERTIES
     @State var searchText: String = ""
     private let categories = CategoryData.values
+    private let flexibleColumns = [
+        GridItem(.flexible(minimum: 60), spacing: 1),
+        GridItem(.flexible(minimum: 60), spacing: 1),
+        GridItem(.flexible(minimum: 60), spacing: 1),
+        GridItem(.flexible(minimum: 60), spacing: 1)
+    ]
     
     // MARK: - COMPONENTS
     private var backgroundView: some View {
         Color.colorGreen
             .ignoresSafeArea()
-    }
-    
-    private var navView: some View {
-        HStack(spacing: 8) {
-            Text("Groceries")
-                .font(.jbB24)
-                .foregroundColor(.white)
-            Spacer()
-            Button {
-            
-            } label: {
-                Image("heart")
-                    .resizable()
-                    .frame(width: 24, height: 24)
-            }
-            Button {
-            
-            } label: {
-                Image("cart")
-                    .resizable()
-                    .frame(width: 24, height: 24)
-            }
-            .padding(.leading, 10)
-        }
-        .frame(height: 48)
     }
     
     private var bannerView: some View {
@@ -53,23 +34,14 @@ struct HomeView: View {
             .padding(.horizontal, 20)
             .padding(.vertical, 12)
         }
-        .background(Color.white)
     }
     
     private var categoryVeiw: some View {
-        VStack(spacing: 1) {
-            HStack(spacing: 1) {
-                ForEach(0..<4, id: \.self) { index in
-                    HomeCategoryItemView(category: categories[index])
-                }
-            }
-            HStack(spacing: 1) {
-                ForEach(4..<8, id: \.self) { index in
-                    HomeCategoryItemView(category: categories[index])
-                }
+        LazyVGrid(columns: flexibleColumns, spacing: 1) {
+            ForEach(0..<categories.count, id: \.self) { index in
+                HomeCategoryItemView(category: categories[index])
             }
         }
-        .background(Color.white)
     }
     
     private var newProductsView: some View {
@@ -135,30 +107,36 @@ struct HomeView: View {
                     .padding(.vertical, 10)
                 }
             } //: VSTACK
-        }
+        } //: ZSTACK
     }
     
     // MARK: - BODY
     var body: some View {
-        ZStack {
-            backgroundView
-            ScrollView(showsIndicators: false) {
-                VStack(spacing: 0) {
-                    navView
+        NavigationView {
+            ZStack {
+                backgroundView
+                VStack(spacing: 20) {
+                    NavView(title: "Groceries")
                         .padding(.horizontal, 20)
                     SearchTextField(searchText: $searchText)
                         .frame(height: 46)
-                        .padding(.top, 20)
                         .padding(.horizontal, 20)
-                    bannerView
-                        .padding(.top, 16)
-                    categoryVeiw
-                    newProductsView
-                    popularProductsView
-                    storesView
-                }
-            } //: SCROLL
-        } //: ZSTACK
+                        .padding(.bottom, -4)
+                    ScrollView(showsIndicators: false) {
+                        VStack(spacing: 0) {
+                            bannerView
+                            categoryVeiw
+                            newProductsView
+                            popularProductsView
+                            storesView
+                        }
+                    } //: SCROLL
+                    .background(Color.white)
+                } //: VSTACK
+            } //: ZSTACK
+        } //: NAVIGATION
+        .navigationTitle("")
+        .navigationBarHidden(true)
     }
 }
 

@@ -32,7 +32,7 @@ struct HomeProductItemView: View {
                 .padding(.vertical, 12)
             }
         } //: ZSTACK
-        .frame(width: 160)
+//        .frame(width: 160)
         .cornerRadius(12)
         .overlay(
             RoundedRectangle(cornerRadius: 12)
