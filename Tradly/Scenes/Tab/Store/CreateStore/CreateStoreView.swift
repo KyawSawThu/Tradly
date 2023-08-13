@@ -9,7 +9,6 @@ import SwiftUI
 
 struct CreateStoreView: View {
     // MARK: - PROPERTIES
-    @Environment(\.presentationMode) var presentationMode
     @State private var name: String = ""
     @State private var webAddress: String = ""
     @State private var desc: String = ""
@@ -83,9 +82,7 @@ struct CreateStoreView: View {
         ZStack {
             backgroundView
             VStack(spacing: 0) {
-                NavView(title: "My Store", style: .secondary, backAction: {
-                    presentationMode.wrappedValue.dismiss()
-                })
+                NavView(title: "My Store", style: .secondary)
                 ScrollView(showsIndicators: false) {
                     VStack(spacing: 0) {
                         headerView

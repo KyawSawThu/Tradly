@@ -43,6 +43,8 @@
 		BBC105C72A83650D001DD9BF /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC105C62A83650D001DD9BF /* OnboardingData.swift */; };
 		BBD991522A88B443008897AE /* CreateStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD991512A88B443008897AE /* CreateStoreView.swift */; };
 		BBD991542A88C24D008897AE /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD991532A88C24D008897AE /* FormTextField.swift */; };
+		BBD991582A88EEBE008897AE /* WishlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD991572A88EEBE008897AE /* WishlistView.swift */; };
+		BBD9915A2A88EEC7008897AE /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD991592A88EEC7008897AE /* CartView.swift */; };
 		BBE48E132A8494D60059BF14 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE48E122A8494D60059BF14 /* LoginView.swift */; };
 		BBE48E162A84A6C40059BF14 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE48E152A84A6C40059BF14 /* TextField.swift */; };
 		BBE48E1A2A84E0150059BF14 /* PrimaryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE48E192A84E0150059BF14 /* PrimaryTextField.swift */; };
@@ -89,6 +91,8 @@
 		BBC105C62A83650D001DD9BF /* OnboardingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
 		BBD991512A88B443008897AE /* CreateStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStoreView.swift; sourceTree = "<group>"; };
 		BBD991532A88C24D008897AE /* FormTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
+		BBD991572A88EEBE008897AE /* WishlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistView.swift; sourceTree = "<group>"; };
+		BBD991592A88EEC7008897AE /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		BBE48E122A8494D60059BF14 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BBE48E152A84A6C40059BF14 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		BBE48E192A84E0150059BF14 /* PrimaryTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTextField.swift; sourceTree = "<group>"; };
@@ -197,6 +201,8 @@
 				BB55C66C2A86099600A13DFC /* Store */,
 				BB55C66F2A8609A000A13DFC /* Order */,
 				BB55C6722A8609B600A13DFC /* Profile */,
+				BBD991552A88EE9F008897AE /* Wishlist */,
+				BBD991562A88EEB0008897AE /* Cart */,
 			);
 			path = Tab;
 			sourceTree = "<group>";
@@ -356,6 +362,22 @@
 			path = CreateStore;
 			sourceTree = "<group>";
 		};
+		BBD991552A88EE9F008897AE /* Wishlist */ = {
+			isa = PBXGroup;
+			children = (
+				BBD991572A88EEBE008897AE /* WishlistView.swift */,
+			);
+			path = Wishlist;
+			sourceTree = "<group>";
+		};
+		BBD991562A88EEB0008897AE /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				BBD991592A88EEC7008897AE /* CartView.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
 		BBE48E112A8494CB0059BF14 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -475,6 +497,7 @@
 				BB17EB8A2A87A2320091023F /* HomeBannerItemView.swift in Sources */,
 				BB17EB982A87E7B70091023F /* NavView.swift in Sources */,
 				BB55C6742A8609BE00A13DFC /* ProfileView.swift in Sources */,
+				BBD9915A2A88EEC7008897AE /* CartView.swift in Sources */,
 				BB17EB8E2A87A2CF0091023F /* HomeProductItemView.swift in Sources */,
 				BB55C6712A8609B300A13DFC /* OrderView.swift in Sources */,
 				BB17EB882A87972F0091023F /* CategoryData.swift in Sources */,
@@ -485,6 +508,7 @@
 				BBE48E132A8494D60059BF14 /* LoginView.swift in Sources */,
 				BB55C66E2A86099E00A13DFC /* StoreView.swift in Sources */,
 				BB17EB942A87AE9E0091023F /* OffsetScrollView.swift in Sources */,
+				BBD991582A88EEBE008897AE /* WishlistView.swift in Sources */,
 				BBD991542A88C24D008897AE /* FormTextField.swift in Sources */,
 				BB17EB8C2A87A2650091023F /* HomeCategoryItemView.swift in Sources */,
 				BBC105C72A83650D001DD9BF /* OnboardingData.swift in Sources */,

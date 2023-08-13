@@ -16,12 +16,12 @@ struct NavView: View {
     // MARK: - PROPERTIES
     var title: String
     var style: NavStyle = .primary
-    var backAction: () -> Void = {}
+    @Environment(\.presentationMode) var presentationMode
     
     // MARK: - COMPONENTS
     private var backButtonView: some View {
         Button {
-            backAction()
+            presentationMode.wrappedValue.dismiss()
         } label: {
             Image("arrow.back.white")
                 .resizable()
@@ -37,7 +37,7 @@ struct NavView: View {
     
     private var heartItemView: some View {
         NavigationLink {
-        
+            WishlistView()
         } label: {
             Image("heart")
                 .resizable()

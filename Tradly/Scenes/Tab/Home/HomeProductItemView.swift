@@ -11,10 +11,10 @@ struct HomeProductItemView: View {
     var body: some View {
         ZStack {
             Color.white
-            VStack(spacing: 0) {
+            VStack(alignment: .leading, spacing: 0) {
                 Image("product.straberry")
                     .resizable()
-                Text("Strawberry Punch")
+                Text("Strawberry")
                     .font(.jbM14)
                     .foregroundColor(.black)
                     .padding(8)
@@ -33,7 +33,6 @@ struct HomeProductItemView: View {
                 .padding(.vertical, 12)
             }
         } //: ZSTACK
-//        .frame(width: 160)
         .cornerRadius(10)
         .overlay(
             RoundedRectangle(cornerRadius: 10)
