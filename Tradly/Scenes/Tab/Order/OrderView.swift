@@ -71,22 +71,22 @@ struct OrderHistoryView_Previews: PreviewProvider {
 
 struct OrderHistoryItemView: View {
     var body: some View {
-        HStack(spacing: 20) {
+        HStack(spacing: 16) {
             Image("cat.beverages")
                 .resizable()
                 .frame(width: 44, height: 44)
                 .cornerRadius(5)
             VStack(alignment: .leading, spacing: 4) {
-                Text("Coca Cola")
+                Text("Lime Soda Drink")
                     .font(.jbM14)
                     .foregroundColor(.black)
                 Text("$25")
                     .font(.jbB18)
                     .foregroundColor(.colorGreen)
             }
-            Spacer()
+            .frame(maxWidth: .infinity)
             Text("Delivered")
-                .font(.jbM12)
+                .font(.jbR12)
                 .foregroundColor(.white)
                 .frame(height: 20)
                 .padding(.horizontal, 16)
