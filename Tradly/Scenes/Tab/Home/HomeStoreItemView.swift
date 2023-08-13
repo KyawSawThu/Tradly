@@ -41,9 +41,9 @@ struct HomeStoreItemView: View {
             } //: ZSTACK
         } //: GEOMETRY
         .frame(width: 160)
-        .cornerRadius(12)
+        .cornerRadius(10)
         .overlay(
-            RoundedRectangle(cornerRadius: 12)
+            RoundedRectangle(cornerRadius: 10)
                 .stroke(Color.gray, lineWidth: 1.5)
         )
         

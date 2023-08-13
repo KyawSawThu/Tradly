@@ -11,5 +11,6 @@ extension Color {
     
     static var colorGreen: Color { Color("ColorGreen") }
     static var colorGrey: Color { Color("ColorGrey") }
+    static var colorLightWhite: Color { Color("ColorLightWhite") }
     
 }

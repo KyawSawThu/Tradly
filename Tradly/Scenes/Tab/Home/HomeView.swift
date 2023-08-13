@@ -46,7 +46,6 @@ struct HomeView: View {
     
     private var newProductsView: some View {
         ZStack {
-            Color.white
             VStack(spacing: 0) {
                 Rectangle()
                     .foregroundColor(.clear)
@@ -70,7 +69,6 @@ struct HomeView: View {
     
     private var popularProductsView: some View {
         ZStack {
-            Color.white
             VStack(spacing: 0) {
                 HomeSecationHeaderView(title: "Popular Products", rightTitle: "See All")
                     .frame(height: 46)
@@ -91,7 +89,6 @@ struct HomeView: View {
     
     private var storesView: some View {
         ZStack {
-            Color.white
             VStack(spacing: 0) {
                 HomeSecationHeaderView(title: "Stores to follow", rightTitle: "See All")
                     .frame(height: 46)
@@ -112,12 +109,11 @@ struct HomeView: View {
     
     // MARK: - BODY
     var body: some View {
-        NavigationView {
-            ZStack {
-                backgroundView
+        ZStack {
+            backgroundView
+            VStack(spacing: 0) {
+                NavView(title: "Groceries")
                 VStack(spacing: 20) {
-                    NavView(title: "Groceries")
-                        .padding(.horizontal, 20)
                     SearchTextField(searchText: $searchText)
                         .frame(height: 46)
                         .padding(.horizontal, 20)
@@ -131,12 +127,10 @@ struct HomeView: View {
                             storesView
                         }
                     } //: SCROLL
-                    .background(Color.white)
+                    .background(Color.colorLightWhite)
                 } //: VSTACK
-            } //: ZSTACK
-        } //: NAVIGATION
-        .navigationTitle("")
-        .navigationBarHidden(true)
+            } //: VSTACK
+        } //: ZSTACK
     }
 }
 

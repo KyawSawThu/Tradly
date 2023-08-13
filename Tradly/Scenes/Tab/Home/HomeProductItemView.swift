@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeProductItemView: View {
     var body: some View {
         ZStack {
+            Color.white
             VStack(spacing: 0) {
                 Image("product.straberry")
                     .resizable()
@@ -33,9 +34,9 @@ struct HomeProductItemView: View {
             }
         } //: ZSTACK
 //        .frame(width: 160)
-        .cornerRadius(12)
+        .cornerRadius(10)
         .overlay(
-            RoundedRectangle(cornerRadius: 12)
+            RoundedRectangle(cornerRadius: 10)
                 .stroke(Color.gray, lineWidth: 1.5)
         )
     }

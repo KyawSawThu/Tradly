@@ -34,7 +34,8 @@ struct SearchTextField: View {
                 .foregroundColor(.colorGreen)
                 .offset(x: 23)
         }
-        .frame(maxWidth: .infinity, maxHeight: 46)
+        .frame(height: 48)
+        .frame(maxWidth: .infinity)
         .background(Color.white)
         .cornerRadius(23)
     }

@@ -39,24 +39,22 @@ struct BrowseView: View {
     
     // MARK: - BODY
     var body: some View {
-        NavigationView {
-            ZStack {
-                backgroundView
-                VStack(spacing: 0) {
-                    VStack(spacing: 24) {
-                        NavView(title: "Browse")
-                        SearchTextField(searchText: $searchText)
-                        menuView
-                    }
-                    .padding(.horizontal, 20)
-                    .padding(.bottom, 16)
-                    ScrollView(showsIndicators: false) {
-                        productsView
-                    }
-                    .background(Color.white)
+        ZStack {
+            backgroundView
+            VStack(spacing: 0) {
+                NavView(title: "Browse")
+                VStack(spacing: 24) {
+                    SearchTextField(searchText: $searchText)
+                    menuView
                 }
-            } //: ZSTACK
-        } //: NAVIGATION
+                .padding(.horizontal, 20)
+                .padding(.bottom, 16)
+                ScrollView(showsIndicators: false) {
+                    productsView
+                }
+                .background(Color.colorLightWhite)
+            }
+        } //: ZSTACK
     }
 }
 

@@ -41,6 +41,8 @@
 		BBC105C22A834AB8001DD9BF /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC105C12A834AB8001DD9BF /* OnboardingView.swift */; };
 		BBC105C42A834AD2001DD9BF /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC105C32A834AD2001DD9BF /* Fonts.swift */; };
 		BBC105C72A83650D001DD9BF /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC105C62A83650D001DD9BF /* OnboardingData.swift */; };
+		BBD991522A88B443008897AE /* CreateStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD991512A88B443008897AE /* CreateStoreView.swift */; };
+		BBD991542A88C24D008897AE /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD991532A88C24D008897AE /* FormTextField.swift */; };
 		BBE48E132A8494D60059BF14 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE48E122A8494D60059BF14 /* LoginView.swift */; };
 		BBE48E162A84A6C40059BF14 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE48E152A84A6C40059BF14 /* TextField.swift */; };
 		BBE48E1A2A84E0150059BF14 /* PrimaryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE48E192A84E0150059BF14 /* PrimaryTextField.swift */; };
@@ -85,6 +87,8 @@
 		BBC105C12A834AB8001DD9BF /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		BBC105C32A834AD2001DD9BF /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		BBC105C62A83650D001DD9BF /* OnboardingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
+		BBD991512A88B443008897AE /* CreateStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStoreView.swift; sourceTree = "<group>"; };
+		BBD991532A88C24D008897AE /* FormTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
 		BBE48E122A8494D60059BF14 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BBE48E152A84A6C40059BF14 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		BBE48E192A84E0150059BF14 /* PrimaryTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTextField.swift; sourceTree = "<group>"; };
@@ -162,7 +166,8 @@
 		BB55C66C2A86099600A13DFC /* Store */ = {
 			isa = PBXGroup;
 			children = (
-				BB55C66D2A86099E00A13DFC /* StoreView.swift */,
+				BBD9914F2A88B430008897AE /* Store */,
+				BBD991502A88B436008897AE /* CreateStore */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -268,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				BBE48E192A84E0150059BF14 /* PrimaryTextField.swift */,
+				BBD991532A88C24D008897AE /* FormTextField.swift */,
 				BBE48E1B2A84E2E20059BF14 /* PrimaryButton.swift */,
 				BB55C6622A85E58200A13DFC /* OTPView.swift */,
 				BB17EB852A878E530091023F /* SearchTextField.swift */,
@@ -332,6 +338,22 @@
 				BB17EB872A87972F0091023F /* CategoryData.swift */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		BBD9914F2A88B430008897AE /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				BB55C66D2A86099E00A13DFC /* StoreView.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		BBD991502A88B436008897AE /* CreateStore */ = {
+			isa = PBXGroup;
+			children = (
+				BBD991512A88B443008897AE /* CreateStoreView.swift */,
+			);
+			path = CreateStore;
 			sourceTree = "<group>";
 		};
 		BBE48E112A8494CB0059BF14 /* Login */ = {
@@ -442,6 +464,7 @@
 				BB17EB902A87A3840091023F /* HomeSecationHeaderView.swift in Sources */,
 				BB55C66B2A86099200A13DFC /* BrowseView.swift in Sources */,
 				BBC105C22A834AB8001DD9BF /* OnboardingView.swift in Sources */,
+				BBD991522A88B443008897AE /* CreateStoreView.swift in Sources */,
 				BBC105C42A834AD2001DD9BF /* Fonts.swift in Sources */,
 				BBC1058F2A833EB0001DD9BF /* TradlyApp.swift in Sources */,
 				BBE4CF932A8537A10005B2CA /* SignUpView.swift in Sources */,
@@ -462,6 +485,7 @@
 				BBE48E132A8494D60059BF14 /* LoginView.swift in Sources */,
 				BB55C66E2A86099E00A13DFC /* StoreView.swift in Sources */,
 				BB17EB942A87AE9E0091023F /* OffsetScrollView.swift in Sources */,
+				BBD991542A88C24D008897AE /* FormTextField.swift in Sources */,
 				BB17EB8C2A87A2650091023F /* HomeCategoryItemView.swift in Sources */,
 				BBC105C72A83650D001DD9BF /* OnboardingData.swift in Sources */,
 				BB17EB862A878E530091023F /* SearchTextField.swift in Sources */,

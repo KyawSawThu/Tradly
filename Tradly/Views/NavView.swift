@@ -7,32 +7,78 @@
 
 import SwiftUI
 
+enum NavStyle {
+    case primary
+    case secondary
+}
+
 struct NavView: View {
+    // MARK: - PROPERTIES
     var title: String
+    var style: NavStyle = .primary
+    var backAction: () -> Void = {}
     
+    // MARK: - COMPONENTS
+    private var backButtonView: some View {
+        Button {
+            backAction()
+        } label: {
+            Image("arrow.back.white")
+                .resizable()
+                .frame(width: 24, height: 24)
+        }
+    }
+    
+    private var titleView: some View {
+        Text(title)
+            .font(.jbB24)
+            .foregroundColor(.white)
+    }
+    
+    private var heartItemView: some View {
+        NavigationLink {
+        
+        } label: {
+            Image("heart")
+                .resizable()
+                .frame(width: 24, height: 24)
+        }
+    }
+    
+    private var cartItemView: some View {
+        NavigationLink {
+        
+        } label: {
+            Image("cart")
+                .resizable()
+                .frame(width: 24, height: 24)
+        }
+    }
+    
+    // MARK: - BODY
     var body: some View {
-        HStack(spacing: 8) {
-            Text(title)
-                .font(.jbB24)
-                .foregroundColor(.white)
-            Spacer()
-            Button {
-            
-            } label: {
-                Image("heart")
-                    .resizable()
-                    .frame(width: 24, height: 24)
-            }
-            Button {
-            
-            } label: {
-                Image("cart")
-                    .resizable()
-                    .frame(width: 24, height: 24)
-            }
-            .padding(.leading, 10)
-        } //: HSTACK
+        ZStack {
+            if style == .primary {
+                HStack(spacing: 8) {
+                    titleView
+                    Spacer()
+                    heartItemView
+                    cartItemView
+                        .padding(.leading, 10)
+                } //: HSTACK
+            } else {
+                ZStack {
+                    HStack {
+                        backButtonView
+                        Spacer()
+                    }
+                    titleView
+                } //: ZSTACK
+            } //: ZSTACK
+        }
         .frame(height: 48)
+        .padding(.bottom, 10)
+        .padding(.horizontal, 20)
     }
 }
 

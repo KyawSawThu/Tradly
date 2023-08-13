@@ -14,34 +14,38 @@ struct RootView: View {
     // MARK: - COMPONENTS
     // MARK: - BODY
     var body: some View {
-        TabView(selection: $selectedTab) {
-            HomeView()
-                .tabItem {
-                    TabItemView(data: tabs[0].item, isActive: $selectedTab.onSelected(0))
-                }
-                .tag(0)
-            BrowseView()
-                .tabItem {
-                    TabItemView(data: tabs[1].item, isActive: $selectedTab.onSelected(1))
-                }
-                .tag(1)
-            StoreView()
-                .tabItem {
-                    TabItemView(data: tabs[2].item, isActive: $selectedTab.onSelected(2))
-                }
-                .tag(2)
-            OrderView()
-                .tabItem {
-                    TabItemView(data: tabs[3].item, isActive: $selectedTab.onSelected(3))
-                }
-                .tag(3)
-            ProfileView()
-                .tabItem {
-                    TabItemView(data: tabs[4].item, isActive: $selectedTab.onSelected(4))
-                }
-                .tag(4)
+        NavigationView {
+            TabView(selection: $selectedTab) {
+                HomeView()
+                    .tabItem {
+                        TabItemView(data: tabs[0].item, isActive: $selectedTab.onSelected(0))
+                    }
+                    .tag(0)
+                BrowseView()
+                    .tabItem {
+                        TabItemView(data: tabs[1].item, isActive: $selectedTab.onSelected(1))
+                    }
+                    .tag(1)
+                StoreView()
+                    .tabItem {
+                        TabItemView(data: tabs[2].item, isActive: $selectedTab.onSelected(2))
+                    }
+                    .tag(2)
+                OrderView()
+                    .tabItem {
+                        TabItemView(data: tabs[3].item, isActive: $selectedTab.onSelected(3))
+                    }
+                    .tag(3)
+                ProfileView()
+                    .tabItem {
+                        TabItemView(data: tabs[4].item, isActive: $selectedTab.onSelected(4))
+                    }
+                    .tag(4)
+            }
+            .accentColor(.colorGreen)
         }
-        .accentColor(.colorGreen)
+        .navigationTitle("")
+        .navigationBarHidden(true)
     }
 }
 
