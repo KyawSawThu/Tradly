@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     // MARK: - PROPERTIES
+    @EnvironmentObject private var appState: AppState
     private var functions: [String] = [
         "Edit Profile", "Language & Currency", "Feedback", "Refer a Friend", "Terms & Conditions"
     ]
@@ -60,7 +61,7 @@ struct ProfileView: View {
                 SettingItemView(title: functions[index])
             }
             Button {
-                print("logout")
+                appState.switchToLogin()
             } label: {
                 Text("Logout")
                     .font(.jbM14)
@@ -81,7 +82,9 @@ struct ProfileView: View {
             VStack(spacing: 0) {
                 NavView(title: "Profile")
                 VStack(spacing: 0) {
-                    infoView
+                    NavigationLink(destination: StoreDetailView()) {
+                        infoView
+                    }
                     functionsView
                         .padding(.top, 8)
                     Spacer()

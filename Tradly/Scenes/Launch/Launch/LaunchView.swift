@@ -9,7 +9,8 @@ import SwiftUI
 
 struct LaunchView: View {
     //MARK: - PROPERTIES
-    @State private var presentOnboarding: Bool = false
+    @State private var launchDone: Bool = false
+    @EnvironmentObject private var appState: AppState
     
     //MARK: - BODY
     var body: some View {
@@ -28,13 +29,15 @@ struct LaunchView: View {
         } //: NAVGATION
         .onAppear {
             Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false) { _ in
-                presentOnboarding = true
+                launchDone = true
             }
         }
-        .fullScreenCover(isPresented: $presentOnboarding) {
-            print("Dismiss!")
-        } content: {
-            OnboardingView()
+        .fullScreenCover(isPresented: $launchDone) {
+            switch appState.sceneState {
+            case .onboard: OnboardingView()
+            case .login: LoginView()
+            case .root: RootView()
+            }
         }
 
     }

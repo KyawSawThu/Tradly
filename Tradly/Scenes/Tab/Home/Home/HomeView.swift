@@ -56,7 +56,9 @@ struct HomeView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 10) {
                         ForEach(0..<5) { _ in
-                            HomeProductItemView()
+                            NavigationLink(destination: ProductDetailView()) {
+                                HomeProductItemView()
+                            }
                         }
                     }
                     .frame(height: 200)
@@ -76,7 +78,9 @@ struct HomeView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 10) {
                         ForEach(0..<5) { _ in
-                            HomeProductItemView()
+                            NavigationLink(destination: ProductDetailView()) {
+                                HomeProductItemView()
+                            }
                         }
                     }
                     .frame(height: 200)
@@ -96,7 +100,9 @@ struct HomeView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 10) {
                         ForEach(0..<5) { _ in
-                            HomeStoreItemView()
+                            NavigationLink(destination: StoreDetailView()) {
+                                HomeStoreItemView()
+                            }
                         }
                     }
                     .frame(height: 200)

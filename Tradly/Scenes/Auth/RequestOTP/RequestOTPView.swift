@@ -9,26 +9,10 @@ import SwiftUI
 
 struct RequestOTPView: View {
     // MARK: - PROPERTIES
-    @Environment(\.presentationMode) var presentationMode
-    
     // MARK: - COMPONENTS
     private var backgroundView: some View {
         Color.colorGreen
             .ignoresSafeArea()
-    }
-    
-    private var navigationView: some View {
-        HStack {
-            Button {
-                presentationMode.wrappedValue.dismiss()
-            } label: {
-                Image("arrow.back.white")
-                    .resizable()
-                    .frame(width: 24, height: 24)
-            }
-            Spacer()
-        }
-        .frame(height: 48)
     }
     
     private var titleView: some View {
@@ -36,6 +20,7 @@ struct RequestOTPView: View {
             Text("Verify your mobile number")
                 .font(.jbM24)
                 .foregroundColor(.white)
+                .multilineTextAlignment(.center)
             Text("We have sent you an SMS with a code to enter number")
                 .font(.jbR16)
                 .foregroundColor(.white)
@@ -69,15 +54,16 @@ struct RequestOTPView: View {
     var body: some View {
         ZStack {
             backgroundView
-            VStack {
-                navigationView
-                    .padding(.bottom, 66)
-                titleView
-                    .padding(.bottom, 16)
-                formView
-                Spacer()
-            } //: VSTACK
-            .padding(.horizontal, 32)
+            VStack(spacing: 56) {
+                NavView(title: "", style: .secondary)
+                    .padding(.horizontal, 12)
+                VStack(spacing: 16) {
+                    titleView
+                    formView
+                    Spacer()
+                } //: VSTACK
+                .padding(.horizontal, 32)
+            }
         } //: ZSTACK
         .navigationBarHidden(true)
     }

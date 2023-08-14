@@ -9,26 +9,12 @@ import SwiftUI
 
 struct VerifyOTPView: View {
     // MARK: - PROPERTIES
-    @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var appState: AppState
     
     // MARK: - COMPONENTS
     private var backgroundView: some View {
         Color.colorGreen
             .ignoresSafeArea()
-    }
-    
-    private var navigationView: some View {
-        HStack {
-            Button {
-                presentationMode.wrappedValue.dismiss()
-            } label: {
-                Image("arrow.back.white")
-                    .resizable()
-                    .frame(width: 24, height: 24)
-            }
-            Spacer()
-        }
-        .frame(height: 48)
     }
     
     private var titleView: some View {
@@ -60,8 +46,8 @@ struct VerifyOTPView: View {
             .padding(.bottom, 48)
 
             Button {
-                AppState.shared.isAuthed = true
                 print("verify")
+                appState.switchToRoot()
             } label: {
                 PrimaryButtonView(title: "Verify")
             }
@@ -73,15 +59,16 @@ struct VerifyOTPView: View {
     var body: some View {
         ZStack {
             backgroundView
-            VStack {
-                navigationView
-                    .padding(.bottom, 64)
-                titleView
-                    .padding(.bottom, 74)
-                formView
-                Spacer()
-            } //: VSTACK
-            .padding(.horizontal, 32)
+            VStack(spacing: 56) {
+                NavView(title: "", style: .secondary)
+                    .padding(.horizontal, 12)
+                VStack(spacing: 74) {
+                    titleView
+                    formView
+                    Spacer()
+                } //: VSTACK
+                .padding(.horizontal, 32)
+            }
         } //: ZSTACK
         .navigationBarHidden(true)
     }

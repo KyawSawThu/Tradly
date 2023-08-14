@@ -31,7 +31,7 @@ struct NavView: View {
     
     private var titleView: some View {
         Text(title)
-            .font(.jbB24)
+            .font(style == .primary ? .jbB24 : .jbSB20)
             .foregroundColor(.white)
     }
     

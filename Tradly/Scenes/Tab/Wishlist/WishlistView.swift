@@ -23,7 +23,9 @@ struct WishlistView: View {
     private var productListView: some View {
         LazyVGrid(columns: flexibleColumns, spacing: 16) {
             ForEach(0..<3) { _ in
-                HomeProductItemView()
+                NavigationLink(destination: ProductDetailView()) {
+                    HomeProductItemView()
+                }
             }
         }
         .padding(.vertical, 20)

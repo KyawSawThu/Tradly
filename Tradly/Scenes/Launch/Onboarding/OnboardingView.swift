@@ -9,11 +9,8 @@ import SwiftUI
 
 struct OnboardingView: View {
     // MARK: - PROPERTIES
-    @State
-    private var presentLogin: Bool = false
-    
-    @State
-    private var currentPage: Int = 0
+    @EnvironmentObject private var appState: AppState
+    @State private var currentPage: Int = 0
     
     private let onboardingData: [OnboardingData] = OnboardingData.data
     
@@ -48,7 +45,7 @@ struct OnboardingView: View {
                     if currentPage < onboardingData.count - 1 {
                         currentPage = currentPage + 1
                     } else {
-                        presentLogin = true
+                        appState.switchToLogin()
                     }
                 } label: {
                     Text("Next")
@@ -59,9 +56,6 @@ struct OnboardingView: View {
                         .background(Color.colorGreen)
                         .cornerRadius(50)
                 } //: BUTTON
-                .fullScreenCover(isPresented: $presentLogin) {
-                    LoginView()
-                }
             } //: VSTACK
             .padding(.horizontal, 36)
         } //: ZSTACK

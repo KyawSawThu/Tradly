@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LoginView: View {
     // MARK: - PROPERTIES
+    @EnvironmentObject private var appState: AppState
     @State private var mobile: String = ""
     @State private var password: String = ""
     
@@ -40,7 +41,7 @@ struct LoginView: View {
     private var footerView: some View {
         VStack(spacing: 32) {
             Button {
-                print("login")
+                appState.switchToRoot()
             } label: {
                 PrimaryButtonView(title: "Login")
             }

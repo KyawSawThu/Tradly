@@ -10,7 +10,12 @@ import SwiftUI
 struct HomeBannerItemView: View {
     var body: some View {
         ZStack {
-            Color.colorGrey
+            Image("cat.vegetables")
+                .resizable()
+                .scaledToFill()
+            Rectangle()
+                .background(Color.gray)
+                .opacity(0.15)
             VStack(alignment: .leading, spacing: 18) {
                 Text("Ready to deliver to your home".uppercased())
                     .font(.jbSB14)

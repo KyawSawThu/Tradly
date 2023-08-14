@@ -74,7 +74,6 @@ struct CreateStoreView: View {
             Color.white
                 .shadow(color: Color.colorGrey, radius: 10, x: 2, y: 2)
         )
-        
     }
     
     // MARK: - BODY

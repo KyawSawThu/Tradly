@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RootView: View {
     // MARK: - PROPERTIES
+    @EnvironmentObject var appState: AppState
     private let tabs: [Tab] = Tab.allCases
     @State private var selectedTab: Int = 0
     // MARK: - COMPONENTS
@@ -44,6 +45,11 @@ struct RootView: View {
             }
             .accentColor(.colorGreen)
         }
+        .onReceive(appState.$sceneState, perform: { state in
+            if state == .root {
+                selectedTab = 0
+            }
+        })
         .navigationTitle("")
         .navigationBarHidden(true)
     }

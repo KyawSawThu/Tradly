@@ -17,7 +17,7 @@ struct HomeSecationHeaderView: View {
                 .font(.jbB18)
                 .foregroundColor(.colorGrey)
             Spacer()
-            NavigationLink {
+            Button {
                 
             } label: {
                 Text(rightTitle)

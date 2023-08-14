@@ -22,20 +22,6 @@ struct SignUpView: View {
             .ignoresSafeArea()
     }
     
-    private var navigationView: some View {
-        HStack {
-            Button {
-                presentationMode.wrappedValue.dismiss()
-            } label: {
-                Image("arrow.back.white")
-                    .resizable()
-                    .frame(width: 24, height: 24)
-            }
-            Spacer()
-        }
-        .frame(height: 48)
-    }
-    
     private var titleView: some View {
         VStack(spacing: 36) {
             Text("Welcome to Tradly")
@@ -84,16 +70,19 @@ struct SignUpView: View {
         ZStack {
             backgroundView
             VStack(spacing: 0) {
-                navigationView
-                Spacer()
-                titleView
-                    .padding(.bottom, 26)
-                formView
-                    .padding(.bottom, 44)
-                footerView
-                Spacer()
-            } //: VSTACK
-            .padding(.horizontal, 32)
+                NavView(title: "", style: .secondary)
+                    .padding(.horizontal, 12)
+                VStack(spacing: 0) {
+                    Spacer()
+                    titleView
+                        .padding(.bottom, 26)
+                    formView
+                        .padding(.bottom, 44)
+                    footerView
+                    Spacer()
+                } //: VSTACK
+                .padding(.horizontal, 32)
+            }
         } //: ZSTACK
         .navigationBarHidden(true)
     }

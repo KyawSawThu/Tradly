@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StoreView: View {
     // MARK: - PROPERTIES
-    @State var store: Bool = true
+    @State var storeCreated: Bool = true
     @State var searchText: String = ""
     private let flexibleColumns = [
         GridItem(.flexible(minimum: 100), spacing: 16),
@@ -60,7 +60,7 @@ struct StoreView: View {
                     .font(.jbB24)
                     .foregroundColor(.black)
                 HStack(spacing: 16) {
-                    NavigationLink {
+                    Button {
                         
                     } label: {
                         Text("Edit Store")
@@ -74,7 +74,7 @@ struct StoreView: View {
                                     .stroke(Color.colorGreen, lineWidth: 1)
                             )
                     }
-                    NavigationLink {
+                    Button {
                         
                     } label: {
                         Text("View Store")
@@ -112,7 +112,7 @@ struct StoreView: View {
                 .font(.jbSB18)
                 .foregroundColor(Color.black)
             NavigationLink {
-                
+                AddProductView()
             } label: {
                 Text("Add Product")
                     .font(.jbSB18)
@@ -157,8 +157,8 @@ struct StoreView: View {
     private var storeView: some View {
         VStack(spacing: 0) {
             storeHeaderView
-//            addProductView
-            productListView
+            addProductView
+//            productListView
         }
     }
     
@@ -169,7 +169,7 @@ struct StoreView: View {
             VStack(spacing: 0) {
                 NavView(title: "Store")
                 ScrollView(showsIndicators: false) {
-                    if store {
+                    if storeCreated {
                         storeView
                     } else {
                         createStoreView
