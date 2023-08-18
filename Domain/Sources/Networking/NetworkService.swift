@@ -3,11 +3,32 @@ import Core
 import Combine
 import Alamofire
 
-
 public class NetworkService {
     
+    // Network Configuration
     private let configuration: NetworkConfiguration
-    private let session: Session
+    
+    private lazy var serverTrustManager: ServerTrustManager? = {
+        if configuration.enableSSLPinning {
+            let shouldEvaluated = !configuration.allowInsecureConnection
+            let host = configuration.host()
+            let evaluator = PinnedCertificatesTrustEvaluator()
+            let serverTrustManager = ServerTrustManager(allHostsMustBeEvaluated: shouldEvaluated, evaluators: [host: evaluator])
+            return serverTrustManager
+        } else {
+            return nil
+        }
+    } ()
+    
+    // Session
+    private lazy var session: Session = {
+        let networkLogger = NetworkLogger()
+        return Session(
+            configuration: configuration.sessionConfiguration,
+            serverTrustManager: serverTrustManager,
+            eventMonitors: configuration.enableDebugLog ? [networkLogger] : []
+        )
+    } ()
     
     public init(
         configuration: NetworkConfiguration
@@ -16,19 +37,37 @@ public class NetworkService {
         self.session = Session(configuration: .default)
     }
     
-    public func request(endpoint: any NetworkEndpoint) -> AnyPublisher<NetworkResponse, NetworkError> {
-        let task = session.request(URL(string: "")!)
+    // Request
+    public func request(endpoint: NetworkEndpoint) -> AnyPublisher<NetworkResponse, NetworkError> {
+        let task = session.request(
+            endpoint.path,
+            method: endpoint.method.value,
+            parameters: endpoint.body,
+            encoding: endpoint.encoding.value,
+            headers: endpoint.asHTTPHeaders()
+        )
         return task.response()
     }
     
-    public func asyncRequest(endpoint: any NetworkEndpoint) async throws -> NetworkResponse {
+    // Async Request
+    public func asyncRequest(endpoint: NetworkEndpoint) async throws -> NetworkResponse {
         try await request(endpoint: endpoint).async()
     }
     
-//    public func upload(endpoint: any NetworkEndpoint, formData: [NetworkFormData]) -> AnyPublisher<NetworkResponse, NetworkError> {
-//        let task = session.upload(multipartFormData: formData.asMutipartFormData(), with: URL(string: "")!)
-//        return task.response()
-//    }
+    // Upload
+    public func upload(endpoint: NetworkEndpoint, formData: [NetworkFormData]) -> AnyPublisher<NetworkResponse, NetworkError> {
+        let task = session.upload(
+            multipartFormData: formData.asMutipartFormData(),
+            to: endpoint.path,
+            headers: endpoint.asHTTPHeaders()
+        )
+        return task.response()
+    }
+    
+    // Async Upload
+    public func asyncUpload(endpoint: NetworkEndpoint, formData: [NetworkFormData]) async throws -> NetworkResponse {
+        try await upload(endpoint: endpoint, formData: formData).async()
+    }
     
     public func cancelRequests() {
         session.cancelAllRequests()

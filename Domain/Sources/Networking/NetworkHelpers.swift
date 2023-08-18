@@ -5,12 +5,15 @@ import Alamofire
 
 // REQUEST METHOD
 public enum RequestMethod: String {
-    case get
-    case post
-    case put
-    case update
-    case delete
+    case get, post, put, update, delete
+    
+    var value: HTTPMethod {
+        .init(rawValue: rawValue)
+    }
 }
+
+// REQUEST HEADERS
+public typealias RequestHeaders = [String: String]
 
 // REQUEST BODY
 public typealias RequestBody = [String: String]
@@ -54,6 +57,13 @@ public enum RequestEncoding {
         case .none: return URLEncoding.default
         }
     }
+}
+
+// AUTH TYPE
+public enum AuthType {
+    case basic
+    case bearer
+    case `none`
 }
 
 // DATA REQUEST EXTENSIONS
