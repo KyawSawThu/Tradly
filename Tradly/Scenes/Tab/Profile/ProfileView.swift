@@ -10,6 +10,7 @@ import SwiftUI
 struct ProfileView: View {
     // MARK: - PROPERTIES
     @EnvironmentObject private var appState: AppState
+    @State private var showAlert: Bool = false
     private var functions: [String] = [
         "Edit Profile", "Language & Currency", "Feedback", "Refer a Friend", "Terms & Conditions"
     ]
@@ -61,7 +62,7 @@ struct ProfileView: View {
                 SettingItemView(title: functions[index])
             }
             Button {
-                appState.switchToLogin()
+                showAlert = true
             } label: {
                 Text("Logout")
                     .font(.jbM14)
@@ -92,6 +93,7 @@ struct ProfileView: View {
                 .padding(.horizontal, 20)
             }
         } //: ZSTACK
+        .alert(title: "Logout", message: "Are you sure you want to logout?", isPresented: $showAlert)
     }
 }
 

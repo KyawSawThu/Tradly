@@ -10,8 +10,8 @@ import SwiftUI
 struct LoginView: View {
     // MARK: - PROPERTIES
     @EnvironmentObject private var appState: AppState
-    @State private var mobile: String = ""
-    @State private var password: String = ""
+    @ObservedObject var viewModel: LoginViewModel
+    @State private var showAlert: Bool = false
     
     // MARK: - COMPONENTS
     private var backgroundView: some View {
@@ -33,21 +33,23 @@ struct LoginView: View {
     
     private var formView: some View {
         VStack(spacing: 16) {
-            PrimaryTextField(text: $mobile, placeholder: "Mobile Number")
-            PrimaryTextField(text: $password, placeholder: "Password")
+            PrimaryTextField(text: $viewModel.mobile, placeholder: "Mobile Number")
+            PrimaryTextField(text: $viewModel.password, placeholder: "Password")
         }
     }
     
     private var footerView: some View {
         VStack(spacing: 32) {
             Button {
+                viewModel.login()
                 appState.switchToRoot()
             } label: {
                 PrimaryButtonView(title: "Login")
             }
             
             Button {
-                print("forgot")
+//                print("forgot")
+                showAlert = true
             } label: {
                 Text("Forgot your password?")
                     .font(.jbR18)
@@ -82,6 +84,11 @@ struct LoginView: View {
                 } // VSTACK
                 .padding(.horizontal, 32)
             } //: ZSTACK
+            .alert(
+                title: "Success",
+                message: "Your account is successfully created. You can start creating amazing store.",
+                isPresented: $showAlert
+            )
         } //: NAVIGATION
     }
 }
@@ -89,6 +96,6 @@ struct LoginView: View {
 // MARK: - PREVIEW
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView(viewModel: .init())
     }
 }

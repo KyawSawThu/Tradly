@@ -35,7 +35,7 @@ struct LaunchView: View {
         .fullScreenCover(isPresented: $launchDone) {
             switch appState.sceneState {
             case .onboard: OnboardingView()
-            case .login: LoginView()
+            case .login: LoginView(viewModel: LoginViewModel())
             case .root: RootView()
             }
         }
