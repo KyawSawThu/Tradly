@@ -10,15 +10,14 @@ let package = Package(
         .library(name: "Networking", targets: ["Networking"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Alamofire/Alamofire.git", exact: "5.7.1"),
-        .package(name: "Core", path: "../Core")
+        .package(url: "https://github.com/Alamofire/Alamofire.git", exact: "5.7.1")
     ],
     targets: [
         .target(
             name: "Networking",
             dependencies: [
-                .product(name: "Core", package: "Core"),
                 .product(name: "Alamofire", package: "Alamofire")
-            ]),
+            ]
+        ),
     ]
 )

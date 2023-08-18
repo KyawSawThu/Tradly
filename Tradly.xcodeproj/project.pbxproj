@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BB01BC862A8F12D0009E9032 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BB01BC852A8F12D0009E9032 /* Alamofire */; };
+		BB01BC8B2A8F6872009E9032 /* CombineExt in Frameworks */ = {isa = PBXBuildFile; productRef = BB01BC8A2A8F6872009E9032 /* CombineExt */; };
 		BB17EB622A87649A0091023F /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17EB612A87649A0091023F /* AppState.swift */; };
 		BB17EB812A878BE40091023F /* JetBrainsMono-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB17EB7D2A878BE40091023F /* JetBrainsMono-Medium.ttf */; };
 		BB17EB822A878BE40091023F /* JetBrainsMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB17EB7E2A878BE40091023F /* JetBrainsMono-Bold.ttf */; };
@@ -124,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB01BC8B2A8F6872009E9032 /* CombineExt in Frameworks */,
 				BB01BC862A8F12D0009E9032 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +500,7 @@
 			name = Tradly;
 			packageProductDependencies = (
 				BB01BC852A8F12D0009E9032 /* Alamofire */,
+				BB01BC8A2A8F6872009E9032 /* CombineExt */,
 			);
 			productName = Tradly;
 			productReference = BBC1058B2A833EB0001DD9BF /* Tradly.app */;
@@ -529,6 +532,7 @@
 			mainGroup = BBC105822A833EB0001DD9BF;
 			packageReferences = (
 				BB01BC842A8F12D0009E9032 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				BB01BC892A8F6872009E9032 /* XCRemoteSwiftPackageReference "CombineExt" */,
 			);
 			productRefGroup = BBC1058C2A833EB0001DD9BF /* Products */;
 			projectDirPath = "";
@@ -831,6 +835,14 @@
 				version = 5.7.1;
 			};
 		};
+		BB01BC892A8F6872009E9032 /* XCRemoteSwiftPackageReference "CombineExt" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CombineCommunity/CombineExt";
+			requirement = {
+				kind = exactVersion;
+				version = 1.8.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -838,6 +850,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BB01BC842A8F12D0009E9032 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		BB01BC8A2A8F6872009E9032 /* CombineExt */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB01BC892A8F6872009E9032 /* XCRemoteSwiftPackageReference "CombineExt" */;
+			productName = CombineExt;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
