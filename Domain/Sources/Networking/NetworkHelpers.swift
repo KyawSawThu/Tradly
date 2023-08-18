@@ -69,6 +69,19 @@ public enum AuthType {
 // DATA REQUEST EXTENSIONS
 extension DataRequest {
     
+    func response(result: @escaping (Result<NetworkResponse, NetworkError>) -> Void) {
+        responseData { responseData in
+            switch responseData.result {
+            case .success(let data):
+                let networkResponse = NetworkResponse.from(responseData.response, data: data)
+                result(.success(networkResponse))
+            case .failure(let error):
+                let networkError = NetworkError.error(error.localizedDescription)
+                result(.failure(networkError))
+            }
+        }
+    }
+    
     func response() -> AnyPublisher<NetworkResponse, NetworkError> {
         AnyPublisher.create { observer in
             self.handle(with: observer).resume()
