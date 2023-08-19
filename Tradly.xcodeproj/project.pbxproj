@@ -64,7 +64,6 @@
 
 /* Begin PBXFileReference section */
 		BB01BC872A8F1301009E9032 /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
-		BB01BC882A8F4EBC009E9032 /* Core */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Core; sourceTree = "<group>"; };
 		BB17EB612A87649A0091023F /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		BB17EB7D2A878BE40091023F /* JetBrainsMono-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JetBrainsMono-Medium.ttf"; sourceTree = "<group>"; };
 		BB17EB7E2A878BE40091023F /* JetBrainsMono-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JetBrainsMono-Bold.ttf"; sourceTree = "<group>"; };
@@ -275,7 +274,6 @@
 		BBC105822A833EB0001DD9BF = {
 			isa = PBXGroup;
 			children = (
-				BB01BC882A8F4EBC009E9032 /* Core */,
 				BB01BC872A8F1301009E9032 /* Domain */,
 				BBC1058D2A833EB0001DD9BF /* Tradly */,
 				BBC1058C2A833EB0001DD9BF /* Products */,
