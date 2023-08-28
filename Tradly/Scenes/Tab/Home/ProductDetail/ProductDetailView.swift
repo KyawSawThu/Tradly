@@ -16,6 +16,7 @@ struct ProductDetailView: View {
     }
     
     // MARK: - HEADER VIEW
+    @ViewBuilder
     private var headerView: some View {
         VStack(alignment: .leading, spacing: 0) {
             Image("product.banner")
@@ -37,6 +38,7 @@ struct ProductDetailView: View {
     }
     
     // MARK: - STORE VIEW
+    @ViewBuilder
     private var storeView: some View {
         HStack(spacing: 12) {
             Text("T")
@@ -67,6 +69,7 @@ struct ProductDetailView: View {
     }
     
     // MARK: - DESCRIPTION VIEW
+    @ViewBuilder
     private var descriptionView: some View {
         Text(
         """
@@ -81,6 +84,7 @@ struct ProductDetailView: View {
     }
     
     // MARK: - DETAILS VIEW
+    @ViewBuilder
     private var detailsView: some View {
         VStack(alignment: .leading, spacing: 12) {
             Text("Additional Details")
@@ -103,6 +107,7 @@ struct ProductDetailView: View {
     }
     
     // MARK: - FOOTER VIEW
+    @ViewBuilder
     private var footerView: some View {
         ZStack {
             Color.white
@@ -111,13 +116,8 @@ struct ProductDetailView: View {
                 
             } label: {
                 Text("Add to Cart")
-                    .font(.jbSB18)
-                    .foregroundColor(.white)
-                    .frame(height: 48)
-                    .frame(maxWidth: .infinity)
-                    .background(Color.colorGreen)
-                    .cornerRadius(24)
             }
+            .buttonStyle(.primary)
             .padding(.horizontal, 20)
         }
         .frame(height: 72)

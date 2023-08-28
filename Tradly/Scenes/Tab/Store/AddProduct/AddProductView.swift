@@ -25,6 +25,7 @@ struct AddProductView: View {
     }
     
     // MARK: - HEADER VIEW
+    @ViewBuilder
     private var headerView: some View {
         VStack(alignment: .leading, spacing: 10) {
             ScrollView(.horizontal, showsIndicators: false) {
@@ -43,6 +44,7 @@ struct AddProductView: View {
     }
     
     // MARK: - FORM VIEW
+    @ViewBuilder
     private var formView: some View {
         ZStack {
             Color.white
@@ -64,6 +66,7 @@ struct AddProductView: View {
     }
     
     // MARK: - FOOTER VIEW
+    @ViewBuilder
     private var footerView: some View {
         ZStack {
             Color.white
@@ -72,13 +75,8 @@ struct AddProductView: View {
                 
             } label: {
                 Text("Add Product")
-                    .font(.jbSB18)
-                    .foregroundColor(.white)
-                    .frame(height: 48)
-                    .frame(maxWidth: .infinity)
-                    .background(Color.colorGreen)
-                    .cornerRadius(24)
             }
+            .buttonStyle(.primary)
             .padding(.horizontal, 20)
         }
         .frame(height: 72)

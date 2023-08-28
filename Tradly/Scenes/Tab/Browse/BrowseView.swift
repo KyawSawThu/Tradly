@@ -20,6 +20,7 @@ struct BrowseView: View {
             .ignoresSafeArea()
     }
     
+    @ViewBuilder
     private var menuView: some View {
         HStack(spacing: 6) {
             ListMenuItemView(title: "Sort By", icon: "sort.white")
@@ -28,6 +29,7 @@ struct BrowseView: View {
         }
     }
     
+    @ViewBuilder
     private var productsView: some View {
         LazyVGrid(columns: flexibleColumns, spacing: 16) {
             ForEach(0..<7) { _ in

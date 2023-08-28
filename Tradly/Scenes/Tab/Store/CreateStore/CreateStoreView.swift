@@ -23,6 +23,7 @@ struct CreateStoreView: View {
             .ignoresSafeArea(edges: .top)
     }
     
+    @ViewBuilder
     private var headerView: some View {
         VStack(spacing: 24) {
             Image("store")
@@ -35,6 +36,7 @@ struct CreateStoreView: View {
         .padding(.vertical, 24)
     }
     
+    @ViewBuilder
     private var formView: some View {
         ZStack {
             Color.white
@@ -52,6 +54,7 @@ struct CreateStoreView: View {
         }
     }
     
+    @ViewBuilder
     private var footerView: some View {
         ZStack {
             Color.white
@@ -60,13 +63,8 @@ struct CreateStoreView: View {
                 
             } label: {
                 Text("Create")
-                    .font(.jbSB18)
-                    .foregroundColor(.white)
-                    .frame(height: 48)
-                    .frame(maxWidth: .infinity)
-                    .background(Color.colorGreen)
-                    .cornerRadius(24)
             }
+            .buttonStyle(.primary)
             .padding(.horizontal, 20)
         }
         .frame(height: 72)

@@ -20,6 +20,7 @@ struct StoreDetailView: View {
     }
     
     // MARK: - HEADER VIEW
+    @ViewBuilder
     private var headerView: some View {
         VStack(spacing: 24) {
             HStack(spacing: 12) {
@@ -61,6 +62,7 @@ struct StoreDetailView: View {
     }
     
     // MARK: - STORE DESCRIPTION VIEW
+    @ViewBuilder
     private var storeDescView: some View {
         HStack(spacing: 44) {
             VStack(spacing: 6) {
@@ -86,6 +88,7 @@ struct StoreDetailView: View {
     }
     
     // MARK: CATEGORY LIST VIEW
+    @ViewBuilder
     private var categoryListView: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 12) {
@@ -107,6 +110,7 @@ struct StoreDetailView: View {
         GridItem(.adaptive(minimum: 100), spacing: 16),
         GridItem(.adaptive(minimum: 100), spacing: 16)
     ]
+    @ViewBuilder
     private var productListView: some View {
         LazyVGrid(columns: columns, spacing: 16) {
             ForEach(0..<5) { _ in

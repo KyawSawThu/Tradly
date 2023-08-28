@@ -16,6 +16,7 @@ struct OrderView: View {
     }
     
     // MARK: - HEADER VIEW
+    @ViewBuilder
     private var headerView: some View {
         HStack(spacing: 8) {
             Text("Transactions")
@@ -35,6 +36,7 @@ struct OrderView: View {
     }
     
     // MARK: - ORDER LIST VIEW
+    @ViewBuilder
     private var orderListView: some View {
         VStack(spacing: 10) {
             ForEach(0..<3) { index in

@@ -19,11 +19,13 @@ struct HomeView: View {
     ]
     
     // MARK: - COMPONENTS
+    @ViewBuilder
     private var backgroundView: some View {
         Color.colorGreen
             .ignoresSafeArea()
     }
     
+    @ViewBuilder
     private var bannerView: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 12) {
@@ -36,6 +38,7 @@ struct HomeView: View {
         }
     }
     
+    @ViewBuilder
     private var categoryVeiw: some View {
         LazyVGrid(columns: flexibleColumns, spacing: 1) {
             ForEach(0..<categories.count, id: \.self) { index in
@@ -44,6 +47,7 @@ struct HomeView: View {
         }
     }
     
+    @ViewBuilder
     private var newProductsView: some View {
         ZStack {
             VStack(spacing: 0) {
@@ -69,6 +73,7 @@ struct HomeView: View {
         }
     }
     
+    @ViewBuilder
     private var popularProductsView: some View {
         ZStack {
             VStack(spacing: 0) {
@@ -91,6 +96,7 @@ struct HomeView: View {
         }
     }
     
+    @ViewBuilder
     private var storesView: some View {
         ZStack {
             VStack(spacing: 0) {

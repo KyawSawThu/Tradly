@@ -23,6 +23,7 @@ struct StoreView: View {
     }
     
     // MARK: - CREATE STORE VIEW
+    @ViewBuilder
     private var createStoreView: some View {
         VStack(spacing: 24) {
             Image("store")
@@ -46,6 +47,7 @@ struct StoreView: View {
     }
     
     // MARK: - STORE HEADER VIEW
+    @ViewBuilder
     private var storeHeaderView: some View {
         ZStack {
             Color.white
@@ -106,6 +108,7 @@ struct StoreView: View {
     }
     
     // MARK: - ADD PRODUCT VIEW
+    @ViewBuilder
     private var addProductView: some View {
         VStack(spacing: 36) {
             Text("You don't have products")
@@ -131,6 +134,7 @@ struct StoreView: View {
     }
     
     // MARK: - PRODUCT LIST VIEW
+    @ViewBuilder
     private var productListView: some View {
         VStack(alignment: .leading, spacing: 24) {
             SearchTextField(searchText: $searchText)
@@ -154,6 +158,7 @@ struct StoreView: View {
     }
     
     // MARK: - STORE VIEW
+    @ViewBuilder
     private var storeView: some View {
         VStack(spacing: 0) {
             storeHeaderView

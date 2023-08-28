@@ -25,3 +25,19 @@ struct PrimaryButton_Previews: PreviewProvider {
             .previewLayout(.sizeThatFits)
     }
 }
+
+struct PrimaryButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .font(.jbSB18)
+            .foregroundColor(.white)
+            .frame(height: 48)
+            .frame(maxWidth: .infinity)
+            .background(Color.colorGreen)
+            .cornerRadius(24)
+    }
+}
+
+extension ButtonStyle where Self == PrimaryButtonStyle {
+    static var primary: Self { Self() }
+}

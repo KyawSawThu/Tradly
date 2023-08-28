@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB01BC862A8F12D0009E9032 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BB01BC852A8F12D0009E9032 /* Alamofire */; };
-		BB01BC8B2A8F6872009E9032 /* CombineExt in Frameworks */ = {isa = PBXBuildFile; productRef = BB01BC8A2A8F6872009E9032 /* CombineExt */; };
 		BB17EB622A87649A0091023F /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17EB612A87649A0091023F /* AppState.swift */; };
 		BB17EB812A878BE40091023F /* JetBrainsMono-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB17EB7D2A878BE40091023F /* JetBrainsMono-Medium.ttf */; };
 		BB17EB822A878BE40091023F /* JetBrainsMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB17EB7E2A878BE40091023F /* JetBrainsMono-Bold.ttf */; };
@@ -41,6 +39,7 @@
 		BB55C6742A8609BE00A13DFC /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55C6732A8609BE00A13DFC /* ProfileView.swift */; };
 		BB55C67A2A860A2D00A13DFC /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55C6792A860A2D00A13DFC /* RootView.swift */; };
 		BB55C67C2A862F7D00A13DFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55C67B2A862F7D00A13DFC /* AppDelegate.swift */; };
+		BB9B2D0F2A98A0CE00A09408 /* CartProductItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9B2D0E2A98A0CE00A09408 /* CartProductItemView.swift */; };
 		BBC1058F2A833EB0001DD9BF /* TradlyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC1058E2A833EB0001DD9BF /* TradlyApp.swift */; };
 		BBC105932A833EB1001DD9BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBC105922A833EB1001DD9BF /* Assets.xcassets */; };
 		BBC105962A833EB1001DD9BF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBC105952A833EB1001DD9BF /* Preview Assets.xcassets */; };
@@ -63,7 +62,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BB01BC872A8F1301009E9032 /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
 		BB17EB612A87649A0091023F /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		BB17EB7D2A878BE40091023F /* JetBrainsMono-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JetBrainsMono-Medium.ttf"; sourceTree = "<group>"; };
 		BB17EB7E2A878BE40091023F /* JetBrainsMono-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JetBrainsMono-Bold.ttf"; sourceTree = "<group>"; };
@@ -96,6 +94,7 @@
 		BB55C6732A8609BE00A13DFC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		BB55C6792A860A2D00A13DFC /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		BB55C67B2A862F7D00A13DFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BB9B2D0E2A98A0CE00A09408 /* CartProductItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartProductItemView.swift; sourceTree = "<group>"; };
 		BBC1058B2A833EB0001DD9BF /* Tradly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tradly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBC1058E2A833EB0001DD9BF /* TradlyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradlyApp.swift; sourceTree = "<group>"; };
 		BBC105922A833EB1001DD9BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -124,8 +123,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB01BC8B2A8F6872009E9032 /* CombineExt in Frameworks */,
-				BB01BC862A8F12D0009E9032 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +271,6 @@
 		BBC105822A833EB0001DD9BF = {
 			isa = PBXGroup;
 			children = (
-				BB01BC872A8F1301009E9032 /* Domain */,
 				BBC1058D2A833EB0001DD9BF /* Tradly */,
 				BBC1058C2A833EB0001DD9BF /* Products */,
 			);
@@ -443,6 +439,7 @@
 			isa = PBXGroup;
 			children = (
 				BBD991592A88EEC7008897AE /* CartView.swift */,
+				BB9B2D0E2A98A0CE00A09408 /* CartProductItemView.swift */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
@@ -497,8 +494,6 @@
 			);
 			name = Tradly;
 			packageProductDependencies = (
-				BB01BC852A8F12D0009E9032 /* Alamofire */,
-				BB01BC8A2A8F6872009E9032 /* CombineExt */,
 			);
 			productName = Tradly;
 			productReference = BBC1058B2A833EB0001DD9BF /* Tradly.app */;
@@ -529,8 +524,6 @@
 			);
 			mainGroup = BBC105822A833EB0001DD9BF;
 			packageReferences = (
-				BB01BC842A8F12D0009E9032 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				BB01BC892A8F6872009E9032 /* XCRemoteSwiftPackageReference "CombineExt" */,
 			);
 			productRefGroup = BBC1058C2A833EB0001DD9BF /* Products */;
 			projectDirPath = "";
@@ -603,6 +596,7 @@
 				BB55C66E2A86099E00A13DFC /* StoreView.swift in Sources */,
 				BB17EB942A87AE9E0091023F /* OffsetScrollView.swift in Sources */,
 				BBD991582A88EEBE008897AE /* WishlistView.swift in Sources */,
+				BB9B2D0F2A98A0CE00A09408 /* CartProductItemView.swift in Sources */,
 				BBD991542A88C24D008897AE /* FormTextField.swift in Sources */,
 				BB17EB8C2A87A2650091023F /* HomeCategoryItemView.swift in Sources */,
 				BBC105C72A83650D001DD9BF /* OnboardingData.swift in Sources */,
@@ -823,38 +817,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		BB01BC842A8F12D0009E9032 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
-			requirement = {
-				kind = exactVersion;
-				version = 5.7.1;
-			};
-		};
-		BB01BC892A8F6872009E9032 /* XCRemoteSwiftPackageReference "CombineExt" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/CombineCommunity/CombineExt";
-			requirement = {
-				kind = exactVersion;
-				version = 1.8.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		BB01BC852A8F12D0009E9032 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BB01BC842A8F12D0009E9032 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		BB01BC8A2A8F6872009E9032 /* CombineExt */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BB01BC892A8F6872009E9032 /* XCRemoteSwiftPackageReference "CombineExt" */;
-			productName = CombineExt;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BBC105832A833EB0001DD9BF /* Project object */;
 }

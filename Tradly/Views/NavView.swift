@@ -47,7 +47,7 @@ struct NavView: View {
     
     private var cartItemView: some View {
         NavigationLink {
-        
+            CartView()
         } label: {
             Image("cart")
                 .resizable()

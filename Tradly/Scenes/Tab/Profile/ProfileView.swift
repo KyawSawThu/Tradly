@@ -25,6 +25,7 @@ struct ProfileView: View {
     }
     
     // MARK: - INFO VIEW
+    @ViewBuilder
     private var infoView: some View {
         HStack(spacing: 14) {
             Text("T")
@@ -56,6 +57,7 @@ struct ProfileView: View {
     }
     
     // MARK: - FUNCTIONS VIEW
+    @ViewBuilder
     private var functionsView: some View {
         VStack(alignment: .leading, spacing: 0) {
             ForEach(0..<functions.count, id: \.self) { index in

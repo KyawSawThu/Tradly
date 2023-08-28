@@ -20,6 +20,7 @@ struct WishlistView: View {
     }
     
     // MARK: - PRODUCT LIST VIEW
+    @ViewBuilder
     private var productListView: some View {
         LazyVGrid(columns: flexibleColumns, spacing: 16) {
             ForEach(0..<3) { _ in
